@@ -11,22 +11,22 @@ import {TitleComponent} from './title';
 import {inject, async, TestComponentBuilder, ComponentFixture} from '@angular/core/testing';
 
 @Component({
-  selector: 'fountain-techs',
+  selector: 'linkzik-techs',
   template: ''
 })
 class MockTechsComponent {}
 @Component({
-  selector: 'fountain-ooter',
+  selector: 'linkzik-ooter',
   template: ''
 })
 class MockFooterComponent {}
 @Component({
-  selector: 'fountain-header',
+  selector: 'linkzik-header',
   template: ''
 })
 class MockHeaderComponent {}
 @Component({
-  selector: 'fountain-title',
+  selector: 'linkzik-title',
   template: ''
 })
 class MockTitleComponent {}
@@ -42,10 +42,10 @@ describe('main component', () => {
       .then((fixture: ComponentFixture<any>) => {
         fixture.detectChanges();
         const main = fixture.nativeElement;
-        expect(main.querySelector('fountain-header')).toBeDefined();
-        expect(main.querySelector('fountain-title')).toBeDefined();
-        expect(main.querySelector('fountain-techs')).toBeDefined();
-        expect(main.querySelector('fountain-footer')).toBeDefined();
+        expect(main.querySelector('linkzik-header')).toBeDefined();
+        expect(main.querySelector('linkzik-title')).toBeDefined();
+        expect(main.querySelector('linkzik-techs')).toBeDefined();
+        expect(main.querySelector('linkzik-footer')).toBeDefined();
       });
   })));
 });

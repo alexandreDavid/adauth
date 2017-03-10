@@ -1,7 +1,7 @@
 import {Component, Input, Output, EventEmitter, ElementRef, Renderer, ViewChild, AfterViewInit} from '@angular/core';
 
 @Component({
-  selector: 'fountain-todo-text-input',
+  selector: 'linkzik-todo-text-input',
   template: require('./TodoTextInput.html'),
 })
 export class TodoTextInputComponent implements AfterViewInit {

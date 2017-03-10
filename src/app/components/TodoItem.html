@@ -1,10 +1,10 @@
 <li [ngClass]="{'editing': editing, 'completed': todo?.completed}">
-  <fountain-todo-text-input
+  <linkzik-todo-text-input
     *ngIf="editing"
     [text]="todo?.text"
     [editing]="editing"
     (onSave)="handleSave($event)"
-    ></fountain-todo-text-input>
+    ></linkzik-todo-text-input>
   <div class="view" *ngIf="!editing">
     <input
       class="toggle"

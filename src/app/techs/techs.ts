@@ -14,7 +14,7 @@ export class Tech {
 }
 
 @Component({
-  selector: 'fountain-techs',
+  selector: 'linkzik-techs',
   template: require('./techs.html'),
   directives: [TechComponent],
   providers: [HTTP_PROVIDERS]

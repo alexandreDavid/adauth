@@ -12,7 +12,7 @@ describe('tech component', () => {
         fixture.componentInstance.tech = {
           key: 'gulp',
           title: 'Gulp',
-          logo: 'http://fountainjs.io/assets/imgs/gulp.png',
+          logo: 'http://linkzikjs.io/assets/imgs/gulp.png',
           text1: 'The streaming build system',
           text2: 'Automate and enhance your workflow'
         };

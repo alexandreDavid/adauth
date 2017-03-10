@@ -6,7 +6,7 @@ import {FooterComponent} from './Footer';
 import * as actions from '../actions/index';
 
 @Component({
-  selector: 'fountain-main-section',
+  selector: 'linkzik-main-section',
   template: require('./MainSection.html'),
   directives: [TodoItemComponent, FooterComponent]
 })

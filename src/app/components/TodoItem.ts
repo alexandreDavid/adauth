@@ -2,7 +2,7 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {TodoTextInputComponent} from './TodoTextInput';
 
 @Component({
-  selector: 'fountain-todo-item',
+  selector: 'linkzik-todo-item',
   template: require('./TodoItem.html'),
   directives: [TodoTextInputComponent]
 })

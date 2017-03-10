@@ -5,7 +5,7 @@ import {TechsComponent} from './techs/techs';
 import {FooterComponent} from './footer';
 
 @Component({
-  selector: 'fountain-app',
+  selector: 'linkzik-app',
   template: require('./main.html'),
   directives: [HeaderComponent, TitleComponent, TechsComponent, FooterComponent]
 })

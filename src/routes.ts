@@ -5,7 +5,7 @@ import {ROUTER_DIRECTIVES, RouterConfig} from '@angular/router';
 import {AppComponent} from './app/containers/App';
 
 @Component({
-  selector: 'fountain-root',
+  selector: 'linkzik-root',
   template: '<router-outlet></router-outlet>',
   directives: [ROUTER_DIRECTIVES]
 })

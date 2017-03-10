@@ -32,7 +32,7 @@ describe('components', () => {
           const h1 = header.querySelector('h1');
           expect(h1).not.toBeNull();
           expect(h1.textContent.trim()).toBe('todos');
-          const todoTextInput = fixture.debugElement.query(By.css('fountain-todo-text-input')).componentInstance;
+          const todoTextInput = fixture.debugElement.query(By.css('linkzik-todo-text-input')).componentInstance;
           expect(todoTextInput.newTodo).toBe(true);
           expect(todoTextInput.placeholder).toBe('What needs to be done?');
         });
@@ -43,7 +43,7 @@ describe('components', () => {
         .then((fixture: ComponentFixture<any>) => {
           fixture.detectChanges();
           const HeaderCmp = fixture.componentInstance;
-          const todoTextInput = fixture.debugElement.query(By.css('fountain-todo-text-input')).componentInstance;
+          const todoTextInput = fixture.debugElement.query(By.css('linkzik-todo-text-input')).componentInstance;
           spyOn(HeaderCmp.store, 'dispatch');
           todoTextInput.onSave.emit('');
           expect(HeaderCmp.store.dispatch.calls.count()).toBe(0);

@@ -4,7 +4,7 @@ import * as actions from '../actions/index';
 import {TodoTextInputComponent} from './TodoTextInput';
 
 @Component({
-  selector: 'fountain-header',
+  selector: 'linkzik-header',
   template: require('./Header.html'),
   directives: [TodoTextInputComponent]
 })

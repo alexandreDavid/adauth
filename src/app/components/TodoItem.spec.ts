@@ -10,7 +10,7 @@ import {TodoTextInputComponent} from './TodoTextInput';
 import {TodoItemComponent} from './TodoItem';
 
 @Component({
-  selector: 'fountain-todo-text-input',
+  selector: 'linkzik-todo-text-input',
   template: ''
 })
 class MockTodoTextInputComponent {
@@ -133,7 +133,7 @@ describe('components', () => {
             completed: false
           };
           fixture.detectChanges();
-          const todoTextInput = fixture.debugElement.query(By.css('fountain-todo-text-input')).componentInstance;
+          const todoTextInput = fixture.debugElement.query(By.css('linkzik-todo-text-input')).componentInstance;
           expect(todoTextInput).not.toBeNull();
           expect(todoTextInput.text).toBe('Use ngrx/store');
           expect(todoTextInput.editing).toBe(true);
@@ -153,7 +153,7 @@ describe('components', () => {
           TodoItemCmp.editing = true;
           fixture.detectChanges();
           spyOn(TodoItemCmp.onSave, 'emit');
-          const todoTextInput = fixture.debugElement.query(By.css('fountain-todo-text-input')).componentInstance;
+          const todoTextInput = fixture.debugElement.query(By.css('linkzik-todo-text-input')).componentInstance;
           spyOn(todoTextInput.onSave, 'emit').and.callThrough();
           spyOn(TodoItemCmp, 'handleSave');
           fixture.detectChanges();
@@ -170,7 +170,7 @@ describe('components', () => {
           TodoItemCmp.editing = true;
           fixture.detectChanges();
           spyOn(TodoItemCmp.onSave, 'emit');
-          const todoTextInput = fixture.debugElement.query(By.css('fountain-todo-text-input')).componentInstance;
+          const todoTextInput = fixture.debugElement.query(By.css('linkzik-todo-text-input')).componentInstance;
           spyOn(todoTextInput.onSave, 'emit').and.callThrough();
           spyOn(TodoItemCmp, 'handleSave').and.callFake(() => { // eslint-disable-line max-nested-callbacks
             TodoItemCmp.editing = false;

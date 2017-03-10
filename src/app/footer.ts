@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'fountain-footer',
+  selector: 'linkzik-footer',
   template: require('./footer.html')
 })
 export class FooterComponent {}

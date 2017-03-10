@@ -7,19 +7,19 @@
     />
   <ul class="todo-list">
     <template ngFor let-todo [ngForOf]="(filteredTodos | async)">
-      <fountain-todo-item
+      <linkzik-todo-item
         [todo]="todo"
         (onDestroy)="handleDestroy($event)"
         (onChange)="handleChange($event)"
         (onSave)="handleSave($event)"
-      ></fountain-todo-item>
+      ></linkzik-todo-item>
     </template>
   </ul>
-  <fountain-footer *ngIf="(todos | async)?.length"
+  <linkzik-footer *ngIf="(todos | async)?.length"
     [completedCount]="completedCount | async"
     [activeCount]="activeCount | async"
     [filter]="visibilityFilter | async"
     (onClearCompleted)="handleClearCompleted()"
     (onShow)="handleShow($event)"
-  ></fountain-footer>
+  ></linkzik-footer>
 </section>

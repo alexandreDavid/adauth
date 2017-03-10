@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {Tech} from './techs';
 
 @Component({
-  selector: 'fountain-tech',
+  selector: 'linkzik-tech',
   template: require('./tech.html')
 })
 export class TechComponent {

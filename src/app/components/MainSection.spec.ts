@@ -15,7 +15,7 @@ import * as actions from '../actions/index';
 import {SHOW_ALL, SHOW_COMPLETED} from '../constants/TodoFilters';
 
 @Component({
-  selector: 'fountain-todo-item',
+  selector: 'linkzik-todo-item',
   template: ''
 })
 class MockTodoItemComponent {
@@ -23,7 +23,7 @@ class MockTodoItemComponent {
 }
 
 @Component({
-  selector: 'fountain-footer',
+  selector: 'linkzik-footer',
   template: ''
 })
 class MockFooterComponent {
@@ -113,9 +113,9 @@ describe('components', () => {
           .createAsync(MainSectionComponent)
           .then((fixture: ComponentFixture<any>) => {
             fixture.detectChanges();
-            const footer = fixture.nativeElement.querySelector('fountain-footer');
+            const footer = fixture.nativeElement.querySelector('linkzik-footer');
             expect(footer.querySelector('footer')).not.toBeNull();
-            const FooterCmp = fixture.debugElement.query(By.css('fountain-footer')).componentInstance;
+            const FooterCmp = fixture.debugElement.query(By.css('linkzik-footer')).componentInstance;
             expect(FooterCmp.completedCount).toBe(0);
             expect(FooterCmp.activeCount).toBe(1);
             expect(FooterCmp.filter.type).toBe(SHOW_ALL);
@@ -128,7 +128,7 @@ describe('components', () => {
           .createAsync(MainSectionComponent)
           .then((fixture: ComponentFixture<any>) => {
             fixture.detectChanges();
-            const FooterCmp = fixture.debugElement.query(By.css('fountain-footer')).componentInstance;
+            const FooterCmp = fixture.debugElement.query(By.css('linkzik-footer')).componentInstance;
             FooterCmp.onShow.emit(SHOW_COMPLETED);
             fixture.detectChanges();
             expect(FooterCmp.filter.type).toBe(SHOW_COMPLETED);
@@ -144,7 +144,7 @@ describe('components', () => {
             MainCmp.store.dispatch(actions.completeAll());
             fixture.detectChanges();
             spyOn(actions, 'clearCompleted').and.callThrough();
-            const FooterCmp = fixture.debugElement.query(By.css('fountain-footer')).componentInstance;
+            const FooterCmp = fixture.debugElement.query(By.css('linkzik-footer')).componentInstance;
             FooterCmp.onClearCompleted.emit();
             fixture.detectChanges();
             expect(actions.clearCompleted).toHaveBeenCalled();
@@ -163,14 +163,14 @@ describe('components', () => {
             fixture.detectChanges();
             const ul = fixture.nativeElement.querySelector('ul');
             expect(ul).not.toBeNull();
-            const todoitems = fixture.debugElement.queryAllNodes(By.css('fountain-todo-item'));
+            const todoitems = fixture.debugElement.queryAllNodes(By.css('linkzik-todo-item'));
             expect(todoitems.length).toBe(2);
             let todos;
             MainCmp.todos.subscribe((_todos: any) => {
               todos = _todos;
             });
             Array.prototype.forEach.call(todoitems, (item, i) => {
-              expect(item.name).toBe('fountain-todo-item');
+              expect(item.name).toBe('linkzik-todo-item');
               expect(item.componentInstance.todo).toBe(todos[i]);
             });
           });
@@ -185,9 +185,9 @@ describe('components', () => {
             const MainCmp = fixture.componentInstance;
             MainCmp.store.dispatch(actions.addTodo('Run the test'));
             MainCmp.store.dispatch(actions.completeTodo('1'));
-            const FooterCmp = fixture.debugElement.query(By.css('fountain-footer')).componentInstance;
+            const FooterCmp = fixture.debugElement.query(By.css('linkzik-footer')).componentInstance;
             FooterCmp.onShow.emit(SHOW_COMPLETED);
-            const updatedList = fixture.debugElement.queryAllNodes(By.css('fountain-todo-item'));
+            const updatedList = fixture.debugElement.queryAllNodes(By.css('linkzik-todo-item'));
             let todos;
             MainCmp.todos.subscribe((_todos: any) => {
               todos = _todos;

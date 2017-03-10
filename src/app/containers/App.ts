@@ -3,7 +3,7 @@ import {HeaderComponent} from '../components/Header';
 import {MainSectionComponent} from '../components/MainSection';
 
 @Component({
-  selector: 'fountain-app',
+  selector: 'linkzik-app',
   template: require('./App.html'),
   directives: [HeaderComponent, MainSectionComponent]
 })
